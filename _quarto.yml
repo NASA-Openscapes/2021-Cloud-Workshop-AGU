@@ -11,7 +11,7 @@ site:
   repo-url: https://github.com/nasa-openscapes/2021-Cloud-Hackathon
   repo-actions: [edit, issue]
   page-navigation: true
-  page-footer: "PODAAC, NSIDC DAAC and LPDAAC (2021). 2021 Cloud Hackathon" 
+  page-footer: "PODAAC, NSIDC DAAC and LPDAAC (2021). 2021 Cloud Hackathon"
  
   navbar: 
     #background: light
