@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nasa-openscapes.github.io/2021-Cloud-Hackathon/index.html</loc>
-    <lastmod>2021-12-06T20:58:17.851Z</lastmod>
+    <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/index.html</loc>
+    <lastmod>2021-12-06T21:56:30.209Z</lastmod>
   </url>
   <url>
-    <loc>https://nasa-openscapes.github.io/2021-Cloud-Hackathon/logistics/schedule.html</loc>
-    <lastmod>2021-12-06T20:58:19.387Z</lastmod>
+    <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/schedule.html</loc>
+    <lastmod>2021-12-06T21:56:31.825Z</lastmod>
   </url>
   <url>
-    <loc>https://nasa-openscapes.github.io/2021-Cloud-Hackathon/logistics/index.html</loc>
-    <lastmod>2021-12-06T20:58:19.559Z</lastmod>
+    <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/index.html</loc>
+    <lastmod>2021-12-06T21:56:32.025Z</lastmod>
   </url>
   <url>
-    <loc>https://nasa-openscapes.github.io/2021-Cloud-Hackathon/logistics/prerequisites.html</loc>
-    <lastmod>2021-12-06T20:58:19.747Z</lastmod>
+    <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/prerequisites.html</loc>
+    <lastmod>2021-12-06T21:56:32.233Z</lastmod>
   </url>
   <url>
-    <loc>https://nasa-openscapes.github.io/2021-Cloud-Hackathon/tutorials/index.html</loc>
-    <lastmod>2021-12-06T20:58:19.931Z</lastmod>
+    <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/index.html</loc>
+    <lastmod>2021-12-06T21:56:32.617Z</lastmod>
   </url>
   <url>
-    <loc>https://nasa-openscapes.github.io/2021-Cloud-Hackathon/tutorials/00_Setup.html</loc>
-    <lastmod>2021-12-06T20:58:20.291Z</lastmod>
+    <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/00_Setup.html</loc>
+    <lastmod>2021-12-06T21:56:32.997Z</lastmod>
   </url>
   <url>
-    <loc>https://nasa-openscapes.github.io/2021-Cloud-Hackathon/external/cof-zarr-reformat.html</loc>
-    <lastmod>2021-12-06T20:58:20.635Z</lastmod>
+    <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/external/cof-zarr-reformat.html</loc>
+    <lastmod>2021-12-06T21:56:33.369Z</lastmod>
   </url>
   <url>
-    <loc>https://nasa-openscapes.github.io/2021-Cloud-Hackathon/external/zarr-eosdis-store.html</loc>
-    <lastmod>2021-12-06T20:58:20.867Z</lastmod>
+    <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/external/zarr-eosdis-store.html</loc>
+    <lastmod>2021-12-06T21:56:33.625Z</lastmod>
   </url>
 </urlset>
