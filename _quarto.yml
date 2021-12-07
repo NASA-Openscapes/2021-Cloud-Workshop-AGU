@@ -42,3 +42,4 @@ site:
           contents: 
             - tutorials/index.md
             - tutorials/00_Setup.md  ## tutorial 0
+            - tutorials/01_Earthdata_Search.md ## tutorial 1
