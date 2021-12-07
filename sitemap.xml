@@ -2,38 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/index.html</loc>
-    <lastmod>2021-12-07T02:45:58.286Z</lastmod>
+    <lastmod>2021-12-07T02:51:41.556Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/schedule.html</loc>
-    <lastmod>2021-12-07T02:45:59.842Z</lastmod>
+    <lastmod>2021-12-07T02:51:43.092Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/index.html</loc>
-    <lastmod>2021-12-07T02:46:00.014Z</lastmod>
+    <lastmod>2021-12-07T02:51:43.264Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/prerequisites.html</loc>
-    <lastmod>2021-12-07T02:46:00.214Z</lastmod>
+    <lastmod>2021-12-07T02:51:43.448Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/index.html</loc>
-    <lastmod>2021-12-07T02:46:00.386Z</lastmod>
+    <lastmod>2021-12-07T02:51:43.612Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/01_Earthdata_Search.html</loc>
-    <lastmod>2021-12-07T02:46:00.554Z</lastmod>
+    <lastmod>2021-12-07T02:51:43.788Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/00_Setup.html</loc>
-    <lastmod>2021-12-07T02:46:00.910Z</lastmod>
+    <lastmod>2021-12-07T02:51:44.148Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/external/cof-zarr-reformat.html</loc>
-    <lastmod>2021-12-07T02:46:01.258Z</lastmod>
+    <lastmod>2021-12-07T02:51:44.496Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/external/zarr-eosdis-store.html</loc>
-    <lastmod>2021-12-07T02:46:01.486Z</lastmod>
+    <lastmod>2021-12-07T02:51:44.720Z</lastmod>
   </url>
 </urlset>
