@@ -2,38 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/index.html</loc>
-    <lastmod>2021-12-07T14:34:03.412Z</lastmod>
+    <lastmod>2021-12-07T15:02:41.501Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/schedule.html</loc>
-    <lastmod>2021-12-07T14:34:04.964Z</lastmod>
+    <lastmod>2021-12-07T15:02:42.713Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/index.html</loc>
-    <lastmod>2021-12-07T14:34:05.132Z</lastmod>
+    <lastmod>2021-12-07T15:02:42.981Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/prerequisites.html</loc>
-    <lastmod>2021-12-07T14:34:05.320Z</lastmod>
+    <lastmod>2021-12-07T15:02:43.265Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/index.html</loc>
-    <lastmod>2021-12-07T14:34:05.492Z</lastmod>
+    <lastmod>2021-12-07T15:02:43.517Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/04_On-Prem_Cloud.html</loc>
+    <lastmod>2021-12-07T15:02:44.289Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/01_Earthdata_Search.html</loc>
-    <lastmod>2021-12-07T14:34:05.704Z</lastmod>
+    <lastmod>2021-12-07T15:02:44.629Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/00_Setup.html</loc>
-    <lastmod>2021-12-07T14:34:06.068Z</lastmod>
+    <lastmod>2021-12-07T15:02:45.161Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/external/cof-zarr-reformat.html</loc>
-    <lastmod>2021-12-07T14:34:06.420Z</lastmod>
+    <lastmod>2021-12-07T15:02:45.637Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/external/zarr-eosdis-store.html</loc>
-    <lastmod>2021-12-07T14:34:06.652Z</lastmod>
+    <lastmod>2021-12-07T15:02:45.961Z</lastmod>
   </url>
 </urlset>
