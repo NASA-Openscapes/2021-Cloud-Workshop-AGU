@@ -49,6 +49,13 @@
     "text": "These tutorials are a combination of narrative, links, code, and outputs. They have been developed for live demos during the Workshop, and are available for self-paced learning.\nTutorials are markdown (.md) and Jupyter (.ipynb) notebooks, and are available on GitHub:\nhttps://github.com/NASA-Openscapes/2021-Cloud-Workshop-AGU/tree/main/tutorials."
   },
   {
+    "objectID": "tutorials/01_Earthdata_Search.html",
+    "href": "tutorials/01_Earthdata_Search.html",
+    "title": "01. Earthdata Search",
+    "section": "",
+    "text": "This tutorial guides you through using Earthdata Search for NASA Earth observations search and discovery, and how to connect serach output (e.g. download or access links) to a programmatic workflow in the cloud.\n\nStep 1. Go to Earthdata Search and Login\nGo to Earthdata Search https://search.earthdata.nasa.gov/ and use your Earthdata login credentials to log in. If you do not have an Earthdata account, please see the Workshop Prerequisites page for guidance.\n\n\nStep 2. Search for dataset of interest\nUse the search box in the upper left to type key words. In this example we are interested in the ECCO dataset, hosted by the PO.DAAC. This dataset is available from the NASA Earthdata Cloud archive hosted in AWS cloud.\nClick on the “Available from AWS Cloud” filter option.\n\n\n\nSearch for ECCO data available in AWS cloud"
+  },
+  {
     "objectID": "tutorials/00_Setup.html#step-1.-login-to-the-hub",
     "href": "tutorials/00_Setup.html#step-1.-login-to-the-hub",
     "title": "00. Setup for tutorials",
