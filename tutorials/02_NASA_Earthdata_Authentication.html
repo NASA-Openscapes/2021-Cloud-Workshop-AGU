@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="quarto-0.2.232">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>2021 Cloud Workshop at AGU – zarr-eosdis-store</title>
+  <title>2021 Cloud Workshop at AGU – nasa_earthdata_authentication</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -86,6 +86,8 @@
   <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
+  <link href="../tutorials/04_On-Prem_Cloud.html" rel="next">
+  <link href="../tutorials/01_Earthdata_Search.html" rel="prev">
   <script src="../site_libs/quarto-html/quarto.js"></script>
   <script src="../site_libs/quarto-html/popper.min.js"></script>
   <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -233,12 +235,12 @@
       <ul class="list-unstyled sidebar-section depth1">
     <li class="">
         <div class="me-auto">
-            <a class="sidebar-section-item d-inline-flex text-start w-100 collapsed" data-bs-toggle="collapse" data-bs-target="#tutorials-collapse" aria-expanded="false">
+            <a class="sidebar-section-item d-inline-flex text-start w-100 " data-bs-toggle="collapse" data-bs-target="#tutorials-collapse" aria-expanded="true">
               <div class="me-auto sidebar-section-item">Tutorials</div>
             <div><i class="bi bi-chevron-right ms-2"></i></div>
             </a>
         </div>
-      <div class="collapse  " id="tutorials-collapse">
+      <div class="collapse  show" id="tutorials-collapse">
         <ul class="list-unstyled sidebar-item-contents">
           <li class="sidebar-item">
   <a href="../tutorials/index.html" class="">Tutorials Overview</a>
@@ -250,7 +252,7 @@
   <a href="../tutorials/01_Earthdata_Search.html" class="">01. Earthdata Search</a>
 </li>
           <li class="sidebar-item">
-  <a href="../tutorials/02_NASA_Earthdata_Authentication.html" class="">02. Authentication for NASA Earthdata</a>
+  <a href="../tutorials/02_NASA_Earthdata_Authentication.html" class="active">02. Authentication for NASA Earthdata</a>
 </li>
           <li class="sidebar-item">
   <a href="../tutorials/04_On-Prem_Cloud.html" class="">04. Pairing Cloud and non-Cloud Data</a>
@@ -266,81 +268,89 @@
   <div id="quarto-toc-sidebar" class=" pt-0 col col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-toc order-last"><nav id="TOC" role="doc-toc">
 <h2 id="toc-title">On this page</h2>
 <ul>
-<li><a href="#zarr-example" class="nav-link active" data-scroll-target="#zarr-example">Zarr Example</a></li>
-<li><a href="#zarr-eosdis-store-example" class="nav-link" data-scroll-target="#zarr-eosdis-store-example">zarr-eosdis-store example</a></li>
+<li><a href="#authentication-for-nasa-earthdata" class="nav-link active" data-scroll-target="#authentication-for-nasa-earthdata">02. Authentication for NASA Earthdata</a>
+<ul class="collapse">
+<li><a href="#summary" class="nav-link" data-scroll-target="#summary">Summary</a>
+<ul class="collapse">
+<li><a href="#earthdata-login" class="nav-link" data-scroll-target="#earthdata-login">Earthdata Login</a></li>
+<li><a href="#authentication-via-netrc-file" class="nav-link" data-scroll-target="#authentication-via-netrc-file">Authentication via netrc File</a></li>
+</ul></li>
+<li><a href="#import-required-packages" class="nav-link" data-scroll-target="#import-required-packages">Import Required Packages</a></li>
+</ul></li>
 </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/nasa-openscapes/2021-Cloud-Workshop-AGU/edit/main/external/zarr-eosdis-store.ipynb" class="toc-action">Edit this page</a></p><p><a href="https://github.com/nasa-openscapes/2021-Cloud-Workshop-AGU/issues/new" class="toc-action">Report an issue</a></p></div></div></nav></div>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/nasa-openscapes/2021-Cloud-Workshop-AGU/edit/main/tutorials/02_NASA_Earthdata_Authentication.ipynb" class="toc-action">Edit this page</a></p><p><a href="https://github.com/nasa-openscapes/2021-Cloud-Workshop-AGU/issues/new" class="toc-action">Report an issue</a></p></div></div></nav></div>
   <div class="col mx-auto col-sm-12 col-md-9 col-lg-7 col-xl-7 px-lg-4 pe-xxl-4 ps-xxl-0">
 <main>
 
-<section id="zarr-example" class="level1">
-<h1>Zarr Example</h1>
-<p>imported on: <strong>2021-12-07</strong></p>
-<p>
-This notebook is from NASA’s Zarr <strong>EOSDIS</strong> store notebook
-</p>
-<blockquote class="blockquote">
-<p>The original source for this document is <a href="https://github.com/nasa/zarr-eosdis-store">https://github.com/nasa/zarr-eosdis-store</a></p>
-</blockquote>
+<section id="authentication-for-nasa-earthdata" class="level1">
+<h1>02. Authentication for NASA Earthdata</h1>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>This notebook creates a hidden <code>.netrc</code> file (<code>_netrc</code> for Window OS) with Earthdata login credentials in your home directory. This file is needed to access NASA Earthdata assets from a scripting environment like Python.</p>
+<section id="earthdata-login" class="level3">
+<h3 class="anchored" data-anchor-id="earthdata-login">Earthdata Login</h3>
+<p>An Earthdata Login account is required to access data, as well as discover restricted data, from the NASA Earthdata system. Thus, to access NASA data, you need Earthdata Login. Please visit <a href="https://urs.earthdata.nasa.gov" class="uri">https://urs.earthdata.nasa.gov</a> to register and manage your Earthdata Login account. This account is free to create and only takes a moment to set up.</p>
 </section>
-<section id="zarr-eosdis-store-example" class="level1">
-<h1>zarr-eosdis-store example</h1>
-<p>Install dependencies</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># zarr and zarr-eosdis-store, the main libraries being demoed</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>{sys.executable} <span class="op">-</span>m pip install zarr zarr<span class="op">-</span>eosdis<span class="op">-</span>store</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Notebook-specific libraries</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>{sys.executable} <span class="op">-</span>m pip install matplotlib</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Important</strong>: To run this, you must first create an Earthdata Login account (https://urs.earthdata.nasa.gov) and place your credentials in ~/.netrc e.g.:</p>
-<pre><code>   machine urs.earthdata.nasa.gov login YOUR_USER password YOUR_PASSWORD</code></pre>
-<p>Never share or commit your password / .netrc file!</p>
-<p>Basic usage. After these lines, we work with <code>ds</code> as though it were a normal Zarr dataset</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> zarr</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> eosdis_store <span class="im">import</span> EosdisStore</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">'https://archive.podaac.earthdata.nasa.gov/podaac-ops-cumulus-protected/MUR-JPL-L4-GLOB-v4.1/20210715090000-JPL-L4_GHRSST-SSTfnd-MUR-GLOB-v02.0-fv04.1.nc'</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>ds <span class="op">=</span> zarr.<span class="bu">open</span>(EosdisStore(url))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>View the file’s variable structure</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode" id="cb4"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ds.tree())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-stdout">
-<pre><code>/
- ├── analysed_sst (1, 17999, 36000) int16
- ├── analysis_error (1, 17999, 36000) int16
- ├── dt_1km_data (1, 17999, 36000) int16
- ├── lat (17999,) float32
- ├── lon (36000,) float32
- ├── mask (1, 17999, 36000) int16
- ├── sea_ice_fraction (1, 17999, 36000) int16
- ├── sst_anomaly (1, 17999, 36000) int16
- └── time (1,) int32</code></pre>
-</div>
-</div>
-<p>Fetch the latitude and longitude arrays and determine start and end indices for our area of interest. In this case, we’re looking at the Great Lakes, which have a nice, recognizeable shape. Latitudes 41 to 49, longitudes -93 to 76.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>lats <span class="op">=</span> ds[<span class="st">'lat'</span>][:]</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>lons <span class="op">=</span> ds[<span class="st">'lon'</span>][:]</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>lat_range <span class="op">=</span> <span class="bu">slice</span>(lats.searchsorted(<span class="dv">41</span>), lats.searchsorted(<span class="dv">49</span>))</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>lon_range <span class="op">=</span> <span class="bu">slice</span>(lons.searchsorted(<span class="op">-</span><span class="dv">93</span>), lons.searchsorted(<span class="op">-</span><span class="dv">76</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Get the analysed sea surface temperature variable over our area of interest and apply scale factor and offset from the file metadata. In a future release, scale factor and add offset will be automatically applied.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>var <span class="op">=</span> ds[<span class="st">'analysed_sst'</span>]</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>analysed_sst <span class="op">=</span> var[<span class="dv">0</span>, lat_range, lon_range] <span class="op">*</span> var.attrs[<span class="st">'scale_factor'</span>] <span class="op">+</span> var.attrs[<span class="st">'add_offset'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Draw a pretty picture</p>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode" id="cb8"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">"figure.figsize"</span>] <span class="op">=</span> [<span class="dv">16</span>, <span class="dv">8</span>]</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>plt.imshow(analysed_sst[::<span class="op">-</span><span class="dv">1</span>, :])</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="zarr-eosdis-store_files/figure-html/cell-7-output-1.png" class="img-fluid"></p>
-</div>
-</div>
-<p>In a dozen lines of code and a few seconds, we have managed to fetch and visualize the 3.2 megabyte we needed from a 732 megabyte file using the original archive URL and no processing services</p>
+<section id="authentication-via-netrc-file" class="level3">
+<h3 class="anchored" data-anchor-id="authentication-via-netrc-file">Authentication via netrc File</h3>
+<p>You will need a netrc file containing your NASA Earthdata Login credentials in order to execute the notebooks. A netrc file can be created manually within text editor and saved to your home directory. An example of the required content is below.</p>
+<pre class="text"><code>machine urs.earthdata.nasa.gov
+login &lt;USERNAME&gt;
+password &lt;PASSWORD&gt;</code></pre>
+<p><code>&lt;USERNAME&gt;</code> and <code>&lt;PASSWORD&gt;</code> would be replaced by your actual Earthdata Login username and password respectively.</p>
+</section>
+</section>
+<section id="import-required-packages" class="level2">
+<h2 class="anchored" data-anchor-id="import-required-packages">Import Required Packages</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> netrc <span class="im">import</span> netrc</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> subprocess <span class="im">import</span> Popen</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> platform <span class="im">import</span> system</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> getpass <span class="im">import</span> getpass</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The code below will:</p>
+<ol type="1">
+<li>check what operating system (OS) is being used to determine which netrc file to check for/create (.netrc or _netrc)</li>
+<li>check if you have an netrc file, and if so, varify if those credentials are for the Earthdata endpoint</li>
+<li>create a netrc file if a netrc file is not present.</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>urs <span class="op">=</span> <span class="st">'urs.earthdata.nasa.gov'</span>    <span class="co"># Earthdata URL endpoint for authentication</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>prompts <span class="op">=</span> [<span class="st">'Enter NASA Earthdata Login Username: '</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>           <span class="st">'Enter NASA Earthdata Login Password: '</span>]</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Determine the OS (Windows machines usually use an '_netrc' file)</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>netrc_name <span class="op">=</span> <span class="st">"_netrc"</span> <span class="cf">if</span> system()<span class="op">==</span><span class="st">"Windows"</span> <span class="cf">else</span> <span class="st">".netrc"</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Determine if netrc file exists, and if so, if it includes NASA Earthdata Login Credentials</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    netrcDir <span class="op">=</span> os.path.expanduser(<span class="ss">f"~/</span><span class="sc">{</span>netrc_name<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    netrc(netrcDir).authenticators(urs)[<span class="dv">0</span>]</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Below, create a netrc file and prompt user for NASA Earthdata Login Username and Password</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">FileNotFoundError</span>:</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    homeDir <span class="op">=</span> os.path.expanduser(<span class="st">"~"</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    Popen(<span class="st">'touch </span><span class="sc">{0}{2}</span><span class="st"> | echo machine </span><span class="sc">{1}</span><span class="st"> &gt;&gt; </span><span class="sc">{0}{2}</span><span class="st">'</span>.<span class="bu">format</span>(homeDir <span class="op">+</span> os.sep, urs, netrc_name), shell<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    Popen(<span class="st">'echo login </span><span class="sc">{}</span><span class="st"> &gt;&gt; </span><span class="sc">{}{}</span><span class="st">'</span>.<span class="bu">format</span>(getpass(prompt<span class="op">=</span>prompts[<span class="dv">0</span>]), homeDir <span class="op">+</span> os.sep, netrc_name), shell<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    Popen(<span class="st">'echo </span><span class="ch">\'</span><span class="st">password </span><span class="sc">{}</span><span class="st"> </span><span class="ch">\'</span><span class="st">&gt;&gt; </span><span class="sc">{}{}</span><span class="st">'</span>.<span class="bu">format</span>(getpass(prompt<span class="op">=</span>prompts[<span class="dv">1</span>]), homeDir <span class="op">+</span> os.sep, netrc_name), shell<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set restrictive permissions</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    Popen(<span class="st">'chmod 0600 </span><span class="sc">{0}{1}</span><span class="st">'</span>.<span class="bu">format</span>(homeDir <span class="op">+</span> os.sep, netrc_name), shell<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Determine OS and edit netrc file if it exists but is not set up for NASA Earthdata Login</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">TypeError</span>:</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    homeDir <span class="op">=</span> os.path.expanduser(<span class="st">"~"</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    Popen(<span class="st">'echo machine </span><span class="sc">{1}</span><span class="st"> &gt;&gt; </span><span class="sc">{0}{2}</span><span class="st">'</span>.<span class="bu">format</span>(homeDir <span class="op">+</span> os.sep, urs, netrc_name), shell<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    Popen(<span class="st">'echo login </span><span class="sc">{}</span><span class="st"> &gt;&gt; </span><span class="sc">{}{}</span><span class="st">'</span>.<span class="bu">format</span>(getpass(prompt<span class="op">=</span>prompts[<span class="dv">0</span>]), homeDir <span class="op">+</span> os.sep, netrc_name), shell<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    Popen(<span class="st">'echo </span><span class="ch">\'</span><span class="st">password </span><span class="sc">{}</span><span class="st"> </span><span class="ch">\'</span><span class="st">&gt;&gt; </span><span class="sc">{}{}</span><span class="st">'</span>.<span class="bu">format</span>(getpass(prompt<span class="op">=</span>prompts[<span class="dv">1</span>]), homeDir <span class="op">+</span> os.sep, netrc_name), shell<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="see-if-the-file-was-created" class="level4">
+<h4 class="anchored" data-anchor-id="see-if-the-file-was-created">See if the file was created</h4>
+<p>If the file was created, we’ll see a <code>.netrc</code> file (<code>_netrc</code> for Window OS) in the list printed below. To view the contents from a Jupyter environment, click <strong>File</strong> on the top toolbar, select <strong>Open from Path…</strong>, type <strong>.netrc</strong>, and click <strong>Open</strong>. The <code>.netrc</code> file will open within the text editor.</p>
+<blockquote class="blockquote">
+<p><strong>!!! Beware,</strong> your password will be visible if the <code>.netrc</code> file is opened in the text editor.</p>
+</blockquote>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>ls <span class="op">-</span>al <span class="op">~/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
+</section>
 </section>
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -513,8 +523,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </main>
 <div class="page-navigation page-navigation-docked">
   <div class="nav-page nav-page-previous">
+      <a href="../tutorials/01_Earthdata_Search.html">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">01. Earthdata Search</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../tutorials/04_On-Prem_Cloud.html">
+        <span class="nav-page-text">04. Pairing Cloud and non-Cloud Data</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </div>
 </div> <!-- /main column -->
