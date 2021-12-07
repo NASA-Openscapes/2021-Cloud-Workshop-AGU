@@ -6,7 +6,7 @@ This tutorial guides you through using [Earthdata Search](https://search.earthda
 
 ### Step 1. Go to Earthdata Search and Login
 
-Go to Earthdata Search https://search.earthdata.nasa.gov/ and use your Earthdata login credentials to log in. If you do not have an Earthdata account, please see the Workshop Prerequisites page for guidance.
+Go to Earthdata Search <https://search.earthdata.nasa.gov> and use your Earthdata login credentials to log in. If you do not have an Earthdata account, please see the [Workshop Prerequisites](https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/prerequisites.html) for guidance.
 
 ### Step 2. Search for dataset of interest
 
