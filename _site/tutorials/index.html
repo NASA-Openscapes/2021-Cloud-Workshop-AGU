@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head>
   <meta charset="utf-8">
-  <meta name="generator" content="quarto-0.2.323">
+  <meta name="generator" content="quarto-0.2.328">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>2021 Cloud Hackathon - Tutorials Overview</title>
+  <title>2021 Cloud Workshop at AGU - Tutorials Overview</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -28,10 +28,12 @@
   <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
   <script src="../site_libs/quarto-html/anchor.min.js"></script>
   <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-  <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <link class="quarto-color-scheme" href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css">
   <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
   <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-  <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link class="quarto-color-scheme" href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="../site_libs/bootstrap/bootstrap-dark.min.css">
   <script id="quarto-search-options" type="application/json">{
     "location": "navbar",
     "copy-button": false,
@@ -51,14 +53,15 @@
       "search-submit-button-title": "Submit"
     }
   }</script>
+  <link rel="stylesheet" href="../styles.css">
 </head>
-<body class="docked fullcontent">
+<body class="docked">
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-light ">
       <div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">2021 Cloud Hackathon</span>
+    <span class="navbar-title">2021 Cloud Workshop at AGU</span>
   </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -69,6 +72,9 @@
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-menu">    
         <li class="dropdown-header">Welcome</li>
+        <li>
+    <a class="dropdown-item" href="../index.html">2021 Cloud Workshop at AGU</a>
+  </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Logistics</li>
         <li>
@@ -80,9 +86,6 @@
         <li>
     <a class="dropdown-item" href="../logistics/prerequisites.html">Prerequisites &amp; help</a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../logistics/github-workflows.html">GitHub workflows</a>
-  </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Tutorials</li>
         <li>
@@ -91,14 +94,23 @@
         <li>
     <a class="dropdown-item" href="../tutorials/00_Setup.html">00. Setup for tutorials</a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../tutorials/01_Earthdata_Search.html">01. Earthdata Search</a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../tutorials/04_On-Prem_Cloud.html">08. Pairing Cloud and non-Cloud Data</a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/nasa-openscapes/2021-Cloud-Hackathon"><i class="bi-github" role="img">
+    <a class="nav-link" href="https://github.com/nasa-openscapes/2021-Cloud-Workshop-AGU"><i class="bi-github" role="img">
 </i> 
  </a>
   </li>  
 </ul>
+              <div>
+                <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -131,6 +143,9 @@
         </div>
       <div class="collapse  " id="welcome-collapse">
         <ul class="list-unstyled sidebar-item-contents">
+          <li class="sidebar-item">
+  <a href="../index.html" class="">2021 Cloud Workshop at AGU</a>
+</li>
         </ul>
       </div>
     </li>
@@ -154,9 +169,6 @@
           <li class="sidebar-item">
   <a href="../logistics/prerequisites.html" class="">Prerequisites &amp; help</a>
 </li>
-          <li class="sidebar-item">
-  <a href="../logistics/github-workflows.html" class="">GitHub workflows</a>
-</li>
         </ul>
       </div>
     </li>
@@ -177,6 +189,12 @@
           <li class="sidebar-item">
   <a href="../tutorials/00_Setup.html" class="">00. Setup for tutorials</a>
 </li>
+          <li class="sidebar-item">
+  <a href="../tutorials/01_Earthdata_Search.html" class="">01. Earthdata Search</a>
+</li>
+          <li class="sidebar-item">
+  <a href="../tutorials/04_On-Prem_Cloud.html" class="">08. Pairing Cloud and non-Cloud Data</a>
+</li>
         </ul>
       </div>
     </li>
@@ -185,19 +203,118 @@
   </div>
 </nav>
 <!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+      <div id="quarto-toc-target"></div>
+    </div>
 <!-- main -->
 <main class="content">
 <header id="title-block-header">
 <h1 class="title d-none d-lg-block display-7">Tutorials Overview</h1>
 </header>
-<p>These tutorials are a combination of narrative, links, code, and outputs. They have been developed for live-coding during the Hackathon, and are available for self-paced learning.</p>
+<p>These tutorials are a combination of narrative, links, code, and outputs. They have been developed for live demos during the Workshop, and are available for self-paced learning.</p>
 <p>Tutorials are markdown (<code>.md</code>) and Jupyter (<code>.ipynb</code>) notebooks, and are available on GitHub:</p>
-<p><a href="https://github.com/NASA-Openscapes/2021-Cloud-Hackathon/tree/main/tutorials" class="uri">https://github.com/NASA-Openscapes/2021-Cloud-Hackathon/tree/main/tutorials</a>.</p>
+<p><a href="https://github.com/NASA-Openscapes/2021-Cloud-Workshop-AGU/tree/main/tutorials" class="uri">https://github.com/NASA-Openscapes/2021-Cloud-Workshop-AGU/tree/main/tutorials</a>.</p>
 
 
 </main> <!-- /main -->
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+    } else {
+      disableStylesheet(alternateStylesheets);
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      return window.localStorage.getItem("quarto-color-scheme");
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = null;
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.id = "quarto-color-scheme-toggle";
+    a.classList.add('top-right');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -281,7 +398,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center">PODAAC, NSIDC DAAC and LPDAAC (2021). 2021 Cloud Hackathon</div>
+      <div class="nav-footer-center">PODAAC, NSIDC DAAC and LPDAAC (2021). 2021 Cloud Workshop</div>
   </div>
 </footer>
 

@@ -43,3 +43,18 @@ site:
             - tutorials/index.md
             - tutorials/00_Setup.md  ## tutorial 0
             - tutorials/01_Earthdata_Search.md ## tutorial 1
+            - tutorials/04_On-Prem_Cloud.ipynb ## tutorial 4
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: [cosmo, theme-dark.scss]
+    code-background: true
+    code-copy: true
+    css: styles.css
+    toc: true
+
+filters:
+  - include-files.lua
+  - quarto
