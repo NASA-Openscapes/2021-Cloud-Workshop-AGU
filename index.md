@@ -21,3 +21,6 @@ Welcome to the **2021 Cloud Workshop at AGU: Enabling Analysis in the Cloud Usin
 
 The **2021 Cloud Workshop at AGU: Enabling Analysis in the Cloud Using NASA Earth Science Data** is a virtual half-day collaborative open science learning experience aimed at exploring, learning, and promoting effective cloud-based science and applications workflows using NASA Earthdata Cloud data, tools, and services (among others), in support of Earth science data processing and analysis in the era of big data.
 
+## Acknowledgements
+
+Cloud Hackathon: Transitioning Earthdata Workflows to the Cloud is co-hosted by NASA's PO.DAAC, NSIDC DAAC, LP.DAAC, with support from ASDC DAAC, GES DISC and the NASA Openscapes Project, and cloud computing infrastructure by 2i2c. 
