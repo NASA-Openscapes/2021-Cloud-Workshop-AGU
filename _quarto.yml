@@ -44,7 +44,7 @@ site:
             - tutorials/00_Setup.md  ## tutorial 0
             - tutorials/01_Earthdata_Search.md ## tutorial 1
             - tutorials/02_NASA_Earthdata_Authentication.ipynb ## tutorial 2
-            - section: "Data Access"
+            - section: "03. Data Access"
               contents:
                 - notebooks/Earthdata_Cloud__Data_Access_OPeNDAP_Example.ipynb
                 - notebooks/Earthdata_Cloud__Single_File__HTTPS_Access_COG_Example.ipynb
