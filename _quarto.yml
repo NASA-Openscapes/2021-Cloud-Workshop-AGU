@@ -46,10 +46,10 @@ site:
             - tutorials/02_NASA_Earthdata_Authentication.ipynb ## tutorial 2
             - section: "03. Data Access"
               contents:
-                - notebooks/Earthdata_Cloud__Data_Access_OPeNDAP_Example.ipynb
-                - notebooks/Earthdata_Cloud__Single_File__HTTPS_Access_COG_Example.ipynb
-                - notebooks/Earthdata_Cloud__Single_File__Direct_S3_Access_COG_Example.ipynb
-                - notebooks/Earthdata_Cloud__Single_File__Direct_S3_Access_NetCDF4_Example.ipynb
+                - how-tos/Earthdata_Cloud__Data_Access_OPeNDAP_Example.ipynb
+                - how-tos/Earthdata_Cloud__Single_File__HTTPS_Access_COG_Example.ipynb
+                - how-tos/Earthdata_Cloud__Single_File__Direct_S3_Access_COG_Example.ipynb
+                - how-tos/Earthdata_Cloud__Single_File__Direct_S3_Access_NetCDF4_Example.ipynb
             - tutorials/04_On-Prem_Cloud.ipynb ## tutorial 4
 
 format:
