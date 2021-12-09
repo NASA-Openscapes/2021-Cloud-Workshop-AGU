@@ -23,4 +23,4 @@ The **2021 Cloud Workshop at AGU: Enabling Analysis in the Cloud Using NASA Eart
 
 ## Acknowledgements
 
-Cloud Hackathon: Transitioning Earthdata Workflows to the Cloud is co-hosted by NASA's PO.DAAC, NSIDC DAAC, LP.DAAC, with support from ASDC DAAC, GES DISC and the NASA Openscapes Project, and cloud computing infrastructure by 2i2c. 
+2021 Cloud Workshop at AGU: Enabling Analysis in the Cloud Using NASA Earth Science Data is co-hosted by NASA's PO.DAAC, NSIDC DAAC, LP.DAAC, with support from ASDC DAAC, GES DISC and the NASA Openscapes Project, and cloud computing infrastructure by 2i2c. 

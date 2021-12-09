@@ -2,62 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/Direct_Access_netCDF_simple.html</loc>
-    <lastmod>2021-12-07T23:28:23.644Z</lastmod>
+    <lastmod>2021-12-09T04:33:13.383Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/index.html</loc>
-    <lastmod>2021-12-07T23:28:23.995Z</lastmod>
+    <lastmod>2021-12-09T04:33:13.704Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/04_On-Prem_Cloud.html</loc>
-    <lastmod>2021-12-07T23:28:26.539Z</lastmod>
+    <lastmod>2021-12-09T04:33:16.294Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/Direct_Access_netCDF_simple.html</loc>
-    <lastmod>2021-12-07T23:28:26.885Z</lastmod>
+    <lastmod>2021-12-09T04:33:16.676Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/01_Earthdata_Search.html</loc>
-    <lastmod>2021-12-07T23:28:27.150Z</lastmod>
+    <lastmod>2021-12-09T04:33:16.952Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/index.html</loc>
-    <lastmod>2021-12-07T23:28:27.382Z</lastmod>
+    <lastmod>2021-12-09T04:33:17.182Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/02_NASA_Earthdata_Authentication.html</loc>
-    <lastmod>2021-12-07T23:28:27.917Z</lastmod>
+    <lastmod>2021-12-09T04:33:17.777Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/00_Setup.html</loc>
-    <lastmod>2021-12-07T23:28:28.282Z</lastmod>
+    <lastmod>2021-12-09T04:33:18.128Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/notebooks/Earthdata_Cloud__Data_Access_OPeNDAP_Example.html</loc>
-    <lastmod>2021-12-07T23:28:28.510Z</lastmod>
+    <lastmod>2021-12-09T04:33:18.339Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/notebooks/Earthdata_Cloud__Single_File__HTTPS_Access_COG_Example.html</loc>
-    <lastmod>2021-12-07T23:28:36.888Z</lastmod>
+    <lastmod>2021-12-09T04:33:26.465Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/notebooks/Earthdata_Cloud__Single_File__Direct_S3_Access_NetCDF4_Example.html</loc>
-    <lastmod>2021-12-07T23:28:40.096Z</lastmod>
+    <lastmod>2021-12-09T04:33:29.676Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/notebooks/Earthdata_Cloud__Single_File__Direct_S3_Access_COG_Example.html</loc>
-    <lastmod>2021-12-07T23:28:48.339Z</lastmod>
+    <lastmod>2021-12-09T04:33:37.856Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/schedule.html</loc>
-    <lastmod>2021-12-07T23:28:48.627Z</lastmod>
+    <lastmod>2021-12-09T04:33:38.093Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/prerequisites.html</loc>
-    <lastmod>2021-12-07T23:28:48.847Z</lastmod>
+    <lastmod>2021-12-09T04:33:38.325Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/index.html</loc>
-    <lastmod>2021-12-07T23:28:49.058Z</lastmod>
+    <lastmod>2021-12-09T04:33:38.542Z</lastmod>
   </url>
 </urlset>
