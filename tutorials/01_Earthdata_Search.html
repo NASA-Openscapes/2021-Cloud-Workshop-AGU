@@ -346,17 +346,18 @@
 </div>
 <section id="entire-file-content" class="level4">
 <h4 class="anchored" data-anchor-id="entire-file-content">Entire file content</h4>
-<p>Let’s stay we are interested in the entire file content, so we select the “Direct Download” option (as opposed to other options to subset or transform the data):</p>
+<p>Let’s stay we are interested in the entire file content, so we select the <strong>“Direct Download”</strong> option (as opposed to other options to subset or transform the data):</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/custom_download.png" class="img-fluid figure-img"></p>
 <p></p><figcaption aria-hidden="true" class="figure-caption"><em>Figure caption: Customize your download or access</em></figcaption><p></p>
 </figure>
 </div>
-<p>Clicking the green Download Data button again, will take us to the final page for instructions to download and links for data access in the cloud. You should see three tabs: <code>Download</code>, <code>AWS S3 Access</code>, <code>Download Script</code>:</p>
+<p>Clicking the green Download Data button again, will take us to the final page for instructions to download and links for data access in the cloud. You should see three tabs: <code>Download Files</code>, <code>AWS S3 Access</code>, <code>Download Script</code>:</p>
 <p><img src="./img/download.png" class="img-fluid" alt="Figure caption: Download to local"> <img src="./img/AWS_s3_access.png" class="img-fluid" alt="Figure caption: Direct S3 access"> <img src="./img/download_script.png" class="img-fluid" alt="Figure caption: Downloading scrip"></p>
-<p>We will find <code>https://</code> links for downloading the files locally. E.g.: <code>https://archive.podaac.earthdata.nasa.gov/podaac-ops-cumulus-protected/ECCO_L4_SSH_05DEG_MONTHLY_V4R4/SEA_SURFACE_HEIGHT_mon_mean_2015-09_ECCO_V4r4_latlon_0p50deg.nc</code></p>
-<p>The <code>S3://</code> links is what we would use to access the data directly in-region within the AWS cloud (an example will be shown in Tutorial 3). E.g.: <code>s3://podaac-ops-cumulus-protected/ECCO_L4_SSH_05DEG_MONTHLY_V4R4/SEA_SURFACE_HEIGHT_mon_mean_2015-09_ECCO_V4r4_latlon_0p50deg.nc</code> where <code>s3</code> indicates data is stored in AWS S3 storage, <code>podaac-ops-cumulus-protected</code> is the <em>bucket</em>, and <code>ECCO_L4_SSH_05DEG_MONTHLY_V4R4</code> is the <em>object prefix</em> (the latter two are also listed in the dataset collection information under Cloud Access (step 3 above)).</p>
+<p>The <em>Download Files</em> tab provides the <code>https://</code> links for downloading the files locally. E.g.: <code>https://archive.podaac.earthdata.nasa.gov/podaac-ops-cumulus-protected/ECCO_L4_SSH_05DEG_MONTHLY_V4R4/SEA_SURFACE_HEIGHT_mon_mean_2015-09_ECCO_V4r4_latlon_0p50deg.nc</code></p>
+<p>The <em>AWS S3 Access</em> tab provides the <code>S3://</code> links, which is what we would use to access the data directly in-region (us-west-2) within the AWS cloud (an example will be shown in Tutorial 3). E.g.: <code>s3://podaac-ops-cumulus-protected/ECCO_L4_SSH_05DEG_MONTHLY_V4R4/SEA_SURFACE_HEIGHT_mon_mean_2015-09_ECCO_V4r4_latlon_0p50deg.nc</code> where <code>s3</code> indicates data is stored in AWS S3 storage, <code>podaac-ops-cumulus-protected</code> is the <em>bucket</em>, and <code>ECCO_L4_SSH_05DEG_MONTHLY_V4R4</code> is the <em>object prefix</em> (the latter two are also listed in the dataset collection information under Cloud Access (step 3 above)).</p>
+<p><strong>Tip</strong>: Another quicker way to find the <em>bucket</em> and <em>object prefix</em> is from the list of data files the search returns. Next to the <strong>+</strong> green button is a grey <em>donwload</em> symbol. Click on that to see the <em>Download Files</em> <code>https://</code> links or on the <em>AWS S3 Access</em> to get the direct <code>S3://</code> access links, which contain the <em>bucket</em> and <em>object prefix</em> where data is stored.</p>
 </section>
 <section id="subset-or-transform-before-download-or-access" class="level4">
 <h4 class="anchored" data-anchor-id="subset-or-transform-before-download-or-access">Subset or transform before download or access</h4>
