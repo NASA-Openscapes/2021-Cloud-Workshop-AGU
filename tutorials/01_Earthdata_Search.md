@@ -14,25 +14,29 @@ Use the search box in the upper left to type key words. In this example we are i
 
 Click on the _**"Available from AWS Cloud"**_ filter option on the left. Here, 104 matching collections were found with the basic `ECCO` search.
 
-![*Search for ECCO data available in AWS cloud in Earthdata Search portal*](./img/search_ecco.png)
+![*Figure caption: Search for ECCO data available in AWS cloud in Earthdata Search portal*](./img/search_ecco.png)
 
-Let's refine our search further. Let's search for `ECCO monthly SSH` in the search box (which will produce 37 matching collections), and for the **time period** for year 2015. The latter can be done using the *calendar* icon on the left under the search box. 
+Let's refine our search further. Let's search for `ECCO monthly SSH` in the search box (which will produce 39 matching collections), and for the **time period** for year 2015. The latter can be done using the *calendar* icon on the left under the search box. 
 
 Scroll down the list of returned matches until we see the dataset of interest, in this case *ECCO Sea Surface Height - Monthly Mean 0.5 Degree (Version 4 Release 4)*.
 
 We can click on the (i) icon for the dataset to read more details, including the **dataset shortname** (helpful for programmatic workflows) just below the dataset name; here `ECCO_L4_SSH_05DEG_MONTHLY_V4R4`.
 
-![Refine search, set temporal bounds, get more information](./img/refine_ecco.png)
+![*Figure caption: Refine search, set temporal bounds, get more information*](./img/refine_ecco.png)
 
 ### Step 3. Explore the dataset details, including Cloud Access information
 
 Once we clicked the (i), scrolling down the info page for the dataset we will see Cloud Access information, such as:
 
 - whether the dataset is available in the cloud 
-- the cloud region (all NASA Earthdata Cloud data is/will be in `us-west-2` region) and 
-- the S3 storage 'bucket' and 'object prefix' where this data is located, and link to getting AWS credentials for data access. We will cover the latter in the Direct Access Tutorials. 
+- the cloud **Region** (all NASA Earthdata Cloud data is/will be in `us-west-2` region) 
+- the S3 storage **bucket** and **object prefix** where this data is located
+- link that generates **AWS S3 Credentials** for in-cloud data access (we will cover this in the Direct Data Access Tutorials)
+- Documentation describing the In-region Direct S3 Access to Buckets. *Note*: these will be unique depending on the DAAC where the data is archived. (We will show examples of direct in-region access in Tutorial 3.)
 
-![Cloud access info in EDS](./img/cloud_access_info.png)
+![*Figure caption: Cloud access info in EDS*](./img/cloud_access_info.png)
+
+![*Figure caption: Documentation describing the In-region Direct S3 Access to Buckets*](./img/cloud_access_documentation.png)
 
 **Pro Tip**: Clicking on "For Developers" to exapnd will provide programmatic endpoints such as those for the CMR API, and more. CMR API and CMR STAC API tutorials can be found on the [2021 Cloud Hackathon website](https://nasa-openscapes.github.io/2021-Cloud-Hackathon/tutorials/).
 
@@ -44,19 +48,19 @@ At the top of the dataset info section, click on Search Results, which will take
 
 Click on the + symbol to add a few files to our project. Here we added the first 3 listed for 2015. Then click on the green button towards the bottom that says "Download". This will take us to another page with options to customize our download or access links.
 
-![Select granules and click download](./img/select_granules_download.png)
+![*Figure caption: Select granules and click download*](./img/select_granules_download.png)
 
 #### Entire file content
 
 Let's stay we are interested in the entire file content, so we select the "Direct Download" option (as opposed to other options to subset or transform the data):
 
-![Customize your download or access](./img/custom_download.png)
+![*Figure caption: Customize your download or access*](./img/custom_download.png)
 
 Clicking the green Download Data button again, will take us to the final page for instructions to download and links for data access in the cloud. You should see three tabs: `Download`, `AWS S3 Access`, `Download Script`:
 
-![Download to local](./img/download.png)
-![Direct S3 access](./img/AWS_s3_access.png)
-![Downloading scrip](./img/download_script.png)
+![*Figure caption: Download to local*](./img/download.png)
+![*Figure caption: Direct S3 access*](./img/AWS_s3_access.png)
+![*Figure caption: Downloading scrip*](./img/download_script.png)
 
 #### Subset or transform before download or access
 
