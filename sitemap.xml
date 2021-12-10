@@ -2,74 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/index.html</loc>
-    <lastmod>2021-12-10T18:01:12.346Z</lastmod>
+    <lastmod>2021-12-10T18:04:29.123Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/schedule.html</loc>
-    <lastmod>2021-12-10T18:01:14.290Z</lastmod>
+    <lastmod>2021-12-10T18:04:32.551Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/index.html</loc>
-    <lastmod>2021-12-10T18:01:14.518Z</lastmod>
+    <lastmod>2021-12-10T18:04:32.835Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/prerequisites.html</loc>
-    <lastmod>2021-12-10T18:01:14.750Z</lastmod>
+    <lastmod>2021-12-10T18:04:33.163Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/Direct_Access_netCDF_simple.html</loc>
-    <lastmod>2021-12-10T18:01:15.146Z</lastmod>
+    <lastmod>2021-12-10T18:04:33.647Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/02_NASA_Earthdata_Authentication.html</loc>
-    <lastmod>2021-12-10T18:01:15.650Z</lastmod>
+    <lastmod>2021-12-10T18:04:34.615Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/index.html</loc>
-    <lastmod>2021-12-10T18:01:15.866Z</lastmod>
+    <lastmod>2021-12-10T18:04:34.895Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/Direct_Access_netCDF_simple.html</loc>
-    <lastmod>2021-12-10T18:01:16.238Z</lastmod>
+    <lastmod>2021-12-10T18:04:35.375Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/04_On-Prem_Cloud.html</loc>
-    <lastmod>2021-12-10T18:01:19.310Z</lastmod>
+    <lastmod>2021-12-10T18:04:39.747Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/01_Earthdata_Search.html</loc>
-    <lastmod>2021-12-10T18:01:19.586Z</lastmod>
+    <lastmod>2021-12-10T18:04:40.115Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/tutorials/00_Setup.html</loc>
-    <lastmod>2021-12-10T18:01:19.974Z</lastmod>
+    <lastmod>2021-12-10T18:04:40.611Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/external/cof-zarr-reformat.html</loc>
-    <lastmod>2021-12-10T18:01:20.526Z</lastmod>
+    <lastmod>2021-12-10T18:04:41.327Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/external/zarr-eosdis-store.html</loc>
-    <lastmod>2021-12-10T18:01:20.814Z</lastmod>
+    <lastmod>2021-12-10T18:04:41.703Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/how-tos/Earthdata_Cloud__Data_Access_OPeNDAP_Example.html</loc>
-    <lastmod>2021-12-10T18:01:31.546Z</lastmod>
+    <lastmod>2021-12-10T18:04:54.963Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/how-tos/Earthdata_Cloud__Single_File__Direct_S3_Access_NetCDF4_Example.html</loc>
-    <lastmod>2021-12-10T18:01:35.378Z</lastmod>
+    <lastmod>2021-12-10T18:05:00.271Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/how-tos/Multi-File_Direct_S3_Access_NetCDF_Example.html</loc>
-    <lastmod>2021-12-10T18:01:42.258Z</lastmod>
+    <lastmod>2021-12-10T18:05:09.311Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/how-tos/Earthdata_Cloud__Single_File__HTTPS_Access_COG_Example.html</loc>
-    <lastmod>2021-12-10T18:01:51.574Z</lastmod>
+    <lastmod>2021-12-10T18:05:20.391Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/how-tos/Earthdata_Cloud__Single_File__Direct_S3_Access_COG_Example.html</loc>
-    <lastmod>2021-12-10T18:02:01.070Z</lastmod>
+    <lastmod>2021-12-10T18:05:31.779Z</lastmod>
   </url>
 </urlset>
