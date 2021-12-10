@@ -296,16 +296,16 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/search_ecco.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption"><em>Search for ECCO data available in AWS cloud in Earthdata Search portal</em></figcaption><p></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption"><em>Figure caption: Search for ECCO data available in AWS cloud in Earthdata Search portal</em></figcaption><p></p>
 </figure>
 </div>
-<p>Let’s refine our search further. Let’s search for <code>ECCO monthly SSH</code> in the search box (which will produce 37 matching collections), and for the <strong>time period</strong> for year 2015. The latter can be done using the <em>calendar</em> icon on the left under the search box.</p>
+<p>Let’s refine our search further. Let’s search for <code>ECCO monthly SSH</code> in the search box (which will produce 39 matching collections), and for the <strong>time period</strong> for year 2015. The latter can be done using the <em>calendar</em> icon on the left under the search box.</p>
 <p>Scroll down the list of returned matches until we see the dataset of interest, in this case <em>ECCO Sea Surface Height - Monthly Mean 0.5 Degree (Version 4 Release 4)</em>.</p>
 <p>We can click on the (i) icon for the dataset to read more details, including the <strong>dataset shortname</strong> (helpful for programmatic workflows) just below the dataset name; here <code>ECCO_L4_SSH_05DEG_MONTHLY_V4R4</code>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/refine_ecco.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Refine search, set temporal bounds, get more information</figcaption><p></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption"><em>Figure caption: Refine search, set temporal bounds, get more information</em></figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -314,13 +314,21 @@
 <p>Once we clicked the (i), scrolling down the info page for the dataset we will see Cloud Access information, such as:</p>
 <ul>
 <li>whether the dataset is available in the cloud</li>
-<li>the cloud region (all NASA Earthdata Cloud data is/will be in <code>us-west-2</code> region) and</li>
-<li>the S3 storage ‘bucket’ and ‘object prefix’ where this data is located, and link to getting AWS credentials for data access. We will cover the latter in the Direct Access Tutorials.</li>
+<li>the cloud <strong>Region</strong> (all NASA Earthdata Cloud data is/will be in <code>us-west-2</code> region)</li>
+<li>the S3 storage <strong>bucket</strong> and <strong>object prefix</strong> where this data is located</li>
+<li>link that generates <strong>AWS S3 Credentials</strong> for in-cloud data access (we will cover this in the Direct Data Access Tutorials)</li>
+<li>Documentation describing the In-region Direct S3 Access to Buckets. <em>Note</em>: these will be unique depending on the DAAC where the data is archived. (We will show examples of direct in-region access in Tutorial 3.)</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/cloud_access_info.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Cloud access info in EDS</figcaption><p></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption"><em>Figure caption: Cloud access info in EDS</em></figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/cloud_access_documentation.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption"><em>Figure caption: Documentation describing the In-region Direct S3 Access to Buckets</em></figcaption><p></p>
 </figure>
 </div>
 <p><strong>Pro Tip</strong>: Clicking on “For Developers” to exapnd will provide programmatic endpoints such as those for the CMR API, and more. CMR API and CMR STAC API tutorials can be found on the <a href="https://nasa-openscapes.github.io/2021-Cloud-Hackathon/tutorials/">2021 Cloud Hackathon website</a>.</p>
@@ -333,7 +341,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/select_granules_download.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Select granules and click download</figcaption><p></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption"><em>Figure caption: Select granules and click download</em></figcaption><p></p>
 </figure>
 </div>
 <section id="entire-file-content" class="level4">
@@ -342,11 +350,11 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/custom_download.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Customize your download or access</figcaption><p></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption"><em>Figure caption: Customize your download or access</em></figcaption><p></p>
 </figure>
 </div>
 <p>Clicking the green Download Data button again, will take us to the final page for instructions to download and links for data access in the cloud. You should see three tabs: <code>Download</code>, <code>AWS S3 Access</code>, <code>Download Script</code>:</p>
-<p><img src="./img/download.png" class="img-fluid" alt="Download to local"> <img src="./img/AWS_s3_access.png" class="img-fluid" alt="Direct S3 access"> <img src="./img/download_script.png" class="img-fluid" alt="Downloading scrip"></p>
+<p><img src="./img/download.png" class="img-fluid" alt="Figure caption: Download to local"> <img src="./img/AWS_s3_access.png" class="img-fluid" alt="Figure caption: Direct S3 access"> <img src="./img/download_script.png" class="img-fluid" alt="Figure caption: Downloading scrip"></p>
 </section>
 <section id="subset-or-transform-before-download-or-access" class="level4">
 <h4 class="anchored" data-anchor-id="subset-or-transform-before-download-or-access">Subset or transform before download or access</h4>
