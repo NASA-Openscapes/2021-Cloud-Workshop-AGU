@@ -13,8 +13,6 @@ If you would like to follow along hands-on during the Workshop, please do the fo
 1. **Earthdata Login account** 
     - Create an Earthdata Login account (if you don't already have one) at <https://urs.earthdata.nasa.gov>
     - Remember your username and password; you will need to be logged in during the workshop!
-1. **Zoom**
-    -  Be prepared to call into Zoom using the link provided in the Slack `2021-nasacloudworkshop-agu` Channel. 
 1. **Get comfortable** 
     - Consider your computer set-up in advance, including an external monitor if possible. You can follow along in Jupyter Hub on your own computer while also watching an instructor demo over Zoom (or equivalent), and will also want quick-access to Slack to ask for help and follow links.
 
