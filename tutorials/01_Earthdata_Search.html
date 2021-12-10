@@ -344,8 +344,8 @@
 <p></p><figcaption aria-hidden="true" class="figure-caption"><em>Figure caption: Select granules and click download</em></figcaption><p></p>
 </figure>
 </div>
-<section id="entire-file-content" class="level4">
-<h4 class="anchored" data-anchor-id="entire-file-content">Entire file content</h4>
+<section id="a.-entire-file-content" class="level4">
+<h4 class="anchored" data-anchor-id="a.-entire-file-content">4.a. Entire file content</h4>
 <p>Let’s stay we are interested in the entire file content, so we select the <strong>“Direct Download”</strong> option (as opposed to other options to subset or transform the data):</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -359,8 +359,8 @@
 <p>The <em>AWS S3 Access</em> tab provides the <code>S3://</code> links, which is what we would use to access the data directly in-region (us-west-2) within the AWS cloud (an example will be shown in Tutorial 3). E.g.: <code>s3://podaac-ops-cumulus-protected/ECCO_L4_SSH_05DEG_MONTHLY_V4R4/SEA_SURFACE_HEIGHT_mon_mean_2015-09_ECCO_V4r4_latlon_0p50deg.nc</code> where <code>s3</code> indicates data is stored in AWS S3 storage, <code>podaac-ops-cumulus-protected</code> is the <em>bucket</em>, and <code>ECCO_L4_SSH_05DEG_MONTHLY_V4R4</code> is the <em>object prefix</em> (the latter two are also listed in the dataset collection information under Cloud Access (step 3 above)).</p>
 <p><strong>Tip</strong>: Another quicker way to find the <em>bucket</em> and <em>object prefix</em> is from the list of data files the search returns. Next to the <strong>+</strong> green button is a grey <em>donwload</em> symbol. Click on that to see the <em>Download Files</em> <code>https://</code> links or on the <em>AWS S3 Access</em> to get the direct <code>S3://</code> access links, which contain the <em>bucket</em> and <em>object prefix</em> where data is stored.</p>
 </section>
-<section id="subset-or-transform-before-download-or-access" class="level4">
-<h4 class="anchored" data-anchor-id="subset-or-transform-before-download-or-access">Subset or transform before download or access</h4>
+<section id="b.-subset-or-transform-before-download-or-access" class="level4">
+<h4 class="anchored" data-anchor-id="b.-subset-or-transform-before-download-or-access">4.b. Subset or transform before download or access</h4>
 <p>DAAC tools and services are also being migrated or developed in the cloud, next to that data. These include the <strong><a href="https://harmony.earthdata.nasa.gov/">Harmony API</a></strong> and <strong>OPeNDAP in the cloud</strong>, as a few examples.</p>
 <p>We can leverage these cloud-based services on cloud-archived data to reduce or transform the data (depending on need) before getting the access links <em>regardless</em> of whether we prefer to download the data and work on a local machine or whether we want to access the data in the cloud (from a cloud workspace). These can be useful data reduction services that support a faster time to science.</p>
 <p><strong>Harmony</strong> <a href="https://harmony.earthdata.nasa.gov/">Harmony</a> allows you to seamlessly analyze Earth observation data from different NASA data centers. These services (API endpoints) provide data reduction (e.g.&nbsp;subsetting) and transfromation services (e.g.&nbsp;convert netCDF data to Zarr cloud optimized format).</p>
