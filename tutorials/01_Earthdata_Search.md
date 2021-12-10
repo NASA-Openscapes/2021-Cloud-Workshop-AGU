@@ -83,7 +83,7 @@ We can leverage these cloud-based services on cloud-archived data to reduce or t
 
 ![*Figure caption: Leverage Harmony cloud-based data transformation services*](./img/eds_harmony.png)
 
-When you click the final green *Download* button, the links provided are to data that had been transformed based on our selections on the previous screen (here chosing to use the Harmony service to reformat the data to Zarr). These data are staged for us in a S3 bucket in AWS, and we can use the `s3://` links to access those specific data. This service also provides `STAC` access links. This particular example is applicable if your workflow is in the AWS us-west-2 region.
+When you click the final green *Download* button, the links provided are to data that had been transformed based on our selections on the previous screen (here chosing to use the Harmony service to reformat the data to Zarr). These data are staged for us in an S3 bucket in AWS, and we can use the `s3://` links to access those specific data. This service also provides `STAC` access links. This particular example is applicable if your workflow is in the AWS us-west-2 region.
 
 ![*Figure caption: Harmony-staged data in S3*](./img/eds_harmony_links.png)
 
