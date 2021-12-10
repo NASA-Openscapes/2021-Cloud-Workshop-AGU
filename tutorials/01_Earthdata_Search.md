@@ -90,13 +90,8 @@ When you click the final green *Download* button, the links provided are to data
 
 ### Step 5. Integrate file links into programmatic workflow, locally or in the AWS cloud. 
 
-In tutorial 3 *Direct S3 Access*, we will work programmatically in the cloud to access datasets of interest, to get us set up for further scientific analysis of choice. One way to connect the search part of the workflow we just did in Earthdata Search to our next steps working in the cloud is to simply copy/paste the `s3://` links provides in Step 4 above into a JupyterHub notebook or script in our cloud workspace, and continue the data analysis from there. 
+In tutorial 3 *Direct Data Access*, we will work programmatically in the cloud to access datasets of interest, to get us set up for further scientific analysis of choice. There are several ways to do this. One way to connect the search part of the workflow we just did in Earthdata Search to our next steps working in the cloud is to simply copy/paste the `s3://` links provides in Step 4 above into a JupyterHub notebook or script in our cloud workspace, and continue the data analysis from there. 
 
 One could also copy/paste the `s3://` links and save them in a text file, then open and read the text file in the notebook or script in the JupyterHub in the cloud. 
 
 Tutorial 3 will pick up from here and cover these next steps in more detail. 
-
-*more here .... talk about direct access*
-
-
-
