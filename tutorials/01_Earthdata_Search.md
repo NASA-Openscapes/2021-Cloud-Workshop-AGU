@@ -75,9 +75,17 @@ where `s3` indicates data is stored in AWS S3 storage, `podaac-ops-cumulus-prote
 
 DAAC tools and services are also being migrated or developed in the cloud, next to that data. These include the **[Harmony API](https://harmony.earthdata.nasa.gov/)** and **OPeNDAP in the cloud**, as a few examples. 
 
-We can leverage these cloud-based services on cloud-archived data to reduce or transform the data (depending on need) *regardless* of whether we prefer to download the data and work on a local machine or whether we want to access the data in the cloud (from a cloud workspace). These can be useful data reduction services that support a faster time to science. 
+We can leverage these cloud-based services on cloud-archived data to reduce or transform the data (depending on need) before getting the access links *regardless* of whether we prefer to download the data and work on a local machine or whether we want to access the data in the cloud (from a cloud workspace). These can be useful data reduction services that support a faster time to science. 
 
-*add more here: Harmony, Opendap*
+**Harmony**
+[Harmony](https://harmony.earthdata.nasa.gov/) allows you to seamlessly analyze Earth observation data from different NASA data centers. These services (API endpoints) provide data reduction (e.g. subsetting) and transfromation services (e.g. convert netCDF data to Zarr cloud optimized format). 
+
+![*Figure caption: Leverage Harmony cloud-based data transformation services*](./img/eds_harmony.png)
+
+When you click the final green *Download* button, the links provided are to data that had been transformed based on our selections on the previous screen (here chosing to use the Harmony service to reformat the data to Zarr). These data are staged for us in a S3 bucket in AWS, and we can use the `s3://` links to access those specific data. This service also provides `STAC` access links. This particular example is applicable if your workflow is in the AWS us-west-2 region.
+
+![*Figure caption: Harmony-staged data in S3*](./img/eds_harmony_links.png)
+
 
 ### Step 5. Integrate file links into programmatic workflow, locally or in the AWS cloud. 
 
