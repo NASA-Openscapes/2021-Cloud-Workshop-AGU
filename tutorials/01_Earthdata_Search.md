@@ -78,6 +78,7 @@ DAAC tools and services are also being migrated or developed in the cloud, next 
 We can leverage these cloud-based services on cloud-archived data to reduce or transform the data (depending on need) before getting the access links *regardless* of whether we prefer to download the data and work on a local machine or whether we want to access the data in the cloud (from a cloud workspace). These can be useful data reduction services that support a faster time to science. 
 
 **Harmony**
+
 [Harmony](https://harmony.earthdata.nasa.gov/) allows you to seamlessly analyze Earth observation data from different NASA data centers. These services (API endpoints) provide data reduction (e.g. subsetting) and transfromation services (e.g. convert netCDF data to Zarr cloud optimized format). 
 
 ![*Figure caption: Leverage Harmony cloud-based data transformation services*](./img/eds_harmony.png)
