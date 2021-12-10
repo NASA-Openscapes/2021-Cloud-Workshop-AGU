@@ -50,7 +50,7 @@ Click on the green **+** symbol to add a few files to our project. Here we added
 
 ![*Figure caption: Select granules and click download*](./img/select_granules_download.png)
 
-#### Entire file content
+#### 4.a. Entire file content
 
 Let's stay we are interested in the entire file content, so we select the **"Direct Download"** option (as opposed to other options to subset or transform the data):
 
@@ -71,7 +71,7 @@ where `s3` indicates data is stored in AWS S3 storage, `podaac-ops-cumulus-prote
 
 **Tip**: Another quicker way to find the *bucket* and *object prefix* is from the list of data files the search returns. Next to the **+** green button is a grey *donwload* symbol. Click on that to see the *Download Files* `https://` links or on the *AWS S3 Access* to get the direct `S3://` access links, which contain the  *bucket* and *object prefix* where data is stored.
 
-#### Subset or transform before download or access
+#### 4.b. Subset or transform before download or access
 
 DAAC tools and services are also being migrated or developed in the cloud, next to that data. These include the **[Harmony API](https://harmony.earthdata.nasa.gov/)** and **OPeNDAP in the cloud**, as a few examples. 
 
