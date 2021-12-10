@@ -14,7 +14,7 @@ Use the search box in the upper left to type key words. In this example we are i
 
 Click on the _**"Available from AWS Cloud"**_ filter option on the left. Here, 104 matching collections were found with the basic `ECCO` search.
 
-![Search for ECCO data available in AWS cloud in Earthdata Search portal](./img/search_ecco.png)
+![*Search for ECCO data available in AWS cloud in Earthdata Search portal*](./img/search_ecco.png)
 
 Let's refine our search further. Let's search for `ECCO monthly SSH` in the search box (which will produce 37 matching collections), and for the **time period** for year 2015. The latter can be done using the *calendar* icon on the left under the search box. 
 
