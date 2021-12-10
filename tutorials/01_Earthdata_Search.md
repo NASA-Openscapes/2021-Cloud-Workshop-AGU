@@ -32,7 +32,7 @@ Once we clicked the (i), scrolling down the info page for the dataset we will se
 - the cloud **Region** (all NASA Earthdata Cloud data is/will be in `us-west-2` region) 
 - the S3 storage **bucket** and **object prefix** where this data is located
 - link that generates **AWS S3 Credentials** for in-cloud data access (we will cover this in the Direct Data Access Tutorials)
-- Documentation describing the In-region Direct S3 Access to Buckets. *Note*: these will be unique depending on the DAAC where the data is archived. (We will show examples of direct in-region access in Tutorial 3.)
+- link to **documentation** describing the In-region Direct S3 Access to Buckets. *Note*: these will be unique depending on the DAAC where the data is archived. (We will show examples of direct in-region access in Tutorial 3.)
 
 ![*Figure caption: Cloud access info in EDS*](./img/cloud_access_info.png)
 
@@ -40,13 +40,13 @@ Once we clicked the (i), scrolling down the info page for the dataset we will se
 
 **Pro Tip**: Clicking on "For Developers" to exapnd will provide programmatic endpoints such as those for the CMR API, and more. CMR API and CMR STAC API tutorials can be found on the [2021 Cloud Hackathon website](https://nasa-openscapes.github.io/2021-Cloud-Hackathon/tutorials/).
 
-For now, let's say we are intersted in getting download link or access links for specific data within this collection.
+For now, let's say we are intersted in getting download link(s) or access link(s) for specific data files (granules) within this collection.
 
-At the top of the dataset info section, click on Search Results, which will take us back to the list of datasets matching our search parameters. Clicking on the dataset (here again it's the same *ECCO Sea Surface Height - Monthly Mean 0.5 Degree (Version 4 Release 4)*) we now see a list of files (granules) that are part of the dataset (collection). 
+At the top of the dataset info section, click on *Search Results*, which will take us back to the list of datasets matching our search parameters. Clicking on the dataset (here again it's the same *ECCO Sea Surface Height - Monthly Mean 0.5 Degree (Version 4 Release 4)*) we now see a list of files (granules) that are part of the dataset (collection). 
 
 ### Step 4. Customize the download or data access
 
-Click on the + symbol to add a few files to our project. Here we added the first 3 listed for 2015. Then click on the green button towards the bottom that says "Download". This will take us to another page with options to customize our download or access links.
+Click on the green **+** symbol to add a few files to our project. Here we added the first 3 listed for 2015. Then click on the green button towards the bottom that says "Download". This will take us to another page with options to customize our download or access link(s).
 
 ![*Figure caption: Select granules and click download*](./img/select_granules_download.png)
 
@@ -61,6 +61,13 @@ Clicking the green Download Data button again, will take us to the final page fo
 ![*Figure caption: Download to local*](./img/download.png)
 ![*Figure caption: Direct S3 access*](./img/AWS_s3_access.png)
 ![*Figure caption: Downloading scrip*](./img/download_script.png)
+
+We will find `https://` links for downloading the files locally. E.g.:
+`https://archive.podaac.earthdata.nasa.gov/podaac-ops-cumulus-protected/ECCO_L4_SSH_05DEG_MONTHLY_V4R4/SEA_SURFACE_HEIGHT_mon_mean_2015-09_ECCO_V4r4_latlon_0p50deg.nc`
+
+The `S3://` links is what we would use to access the data directly in-region within the AWS cloud (an example will be shown in Tutorial 3). E.g.:
+`s3://podaac-ops-cumulus-protected/ECCO_L4_SSH_05DEG_MONTHLY_V4R4/SEA_SURFACE_HEIGHT_mon_mean_2015-09_ECCO_V4r4_latlon_0p50deg.nc`
+where `s3` indicates data is stored in AWS S3 storage, `podaac-ops-cumulus-protected` is the *bucket*, and `ECCO_L4_SSH_05DEG_MONTHLY_V4R4` is the *object prefix* (the latter two are also listed in the dataset collection information under Cloud Access (step 3 above)).
 
 #### Subset or transform before download or access
 
