@@ -1,7 +1,16 @@
-.ipynb_checkpoints/
+.ipynb_checkpoints
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
 
 /.quarto/
+
+
+.env
+__pycache__
+*.py[cod]
+
+.coverage
+.cache
+
