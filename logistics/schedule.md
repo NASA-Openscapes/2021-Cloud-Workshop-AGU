@@ -14,7 +14,7 @@ We will engage primarily with this group and schedule via Zoom; see [prerequisit
 |------|-------|-------------------|
 | 8:00 am | Welcome | Erin Robinson & Julie Lowndes, Openscapes | 
 | 8:05 am | NASA and the Cloud Paradigm | Catalina Oaida, PO.DAAC & Cyndi Hall, NASA |
-| 8:20 am | Tutorial 0: Quick orientation 2i2c | Luis Lopez, NSIDC
+| 8:20 am | Tutorial 0: Orientation and setup | Luis Lopez, NSIDC
 | 8:35 am | Tutorial 1: EarthData Search | Catalina Oaida, PO.DAAC |
 | 9:05 am | Tutorial 2: EarthData Authentication | Aaron Friesz, LP DAAC |
 | 9:20 am | Break|  |
@@ -27,6 +27,8 @@ We will engage primarily with this group and schedule via Zoom; see [prerequisit
 
 - **Welcome and Code of Conduct**
   - Please see the `NASA_CloudWorkshop_Notes` Google Doc
+
+![](images/starwars-team-nasa.png)
 
 ### Closing
 

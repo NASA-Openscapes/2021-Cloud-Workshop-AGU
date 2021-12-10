@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/schedule.html</loc>
-    <lastmod>2021-12-10T21:06:54.067Z</lastmod>
+    <lastmod>2021-12-10T21:15:35.243Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/logistics/prerequisites.html</loc>
@@ -83,5 +83,9 @@
   <url>
     <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/how-tos/Earthdata_Cloud__Single_File__Direct_S3_Access_COG_Example.html</loc>
     <lastmod>2021-12-10T18:36:31.521Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/cloud-paradigm.html</loc>
+    <lastmod>2021-12-10T21:11:20.129Z</lastmod>
   </url>
 </urlset>
