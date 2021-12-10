@@ -52,22 +52,24 @@ Click on the green **+** symbol to add a few files to our project. Here we added
 
 #### Entire file content
 
-Let's stay we are interested in the entire file content, so we select the "Direct Download" option (as opposed to other options to subset or transform the data):
+Let's stay we are interested in the entire file content, so we select the **"Direct Download"** option (as opposed to other options to subset or transform the data):
 
 ![*Figure caption: Customize your download or access*](./img/custom_download.png)
 
-Clicking the green Download Data button again, will take us to the final page for instructions to download and links for data access in the cloud. You should see three tabs: `Download`, `AWS S3 Access`, `Download Script`:
+Clicking the green Download Data button again, will take us to the final page for instructions to download and links for data access in the cloud. You should see three tabs: `Download Files`, `AWS S3 Access`, `Download Script`:
 
 ![*Figure caption: Download to local*](./img/download.png)
 ![*Figure caption: Direct S3 access*](./img/AWS_s3_access.png)
 ![*Figure caption: Downloading scrip*](./img/download_script.png)
 
-We will find `https://` links for downloading the files locally. E.g.:
+The *Download Files* tab provides the `https://` links for downloading the files locally. E.g.:
 `https://archive.podaac.earthdata.nasa.gov/podaac-ops-cumulus-protected/ECCO_L4_SSH_05DEG_MONTHLY_V4R4/SEA_SURFACE_HEIGHT_mon_mean_2015-09_ECCO_V4r4_latlon_0p50deg.nc`
 
-The `S3://` links is what we would use to access the data directly in-region within the AWS cloud (an example will be shown in Tutorial 3). E.g.:
+The *AWS S3 Access* tab provides the `S3://` links, which is what we would use to access the data directly in-region (us-west-2) within the AWS cloud (an example will be shown in Tutorial 3). E.g.:
 `s3://podaac-ops-cumulus-protected/ECCO_L4_SSH_05DEG_MONTHLY_V4R4/SEA_SURFACE_HEIGHT_mon_mean_2015-09_ECCO_V4r4_latlon_0p50deg.nc`
 where `s3` indicates data is stored in AWS S3 storage, `podaac-ops-cumulus-protected` is the *bucket*, and `ECCO_L4_SSH_05DEG_MONTHLY_V4R4` is the *object prefix* (the latter two are also listed in the dataset collection information under Cloud Access (step 3 above)).
+
+**Tip**: Another quicker way to find the *bucket* and *object prefix* is from the list of data files the search returns. Next to the **+** green button is a grey *donwload* symbol. Click on that to see the *Download Files* `https://` links or on the *AWS S3 Access* to get the direct `S3://` access links, which contain the  *bucket* and *object prefix* where data is stored.
 
 #### Subset or transform before download or access
 
