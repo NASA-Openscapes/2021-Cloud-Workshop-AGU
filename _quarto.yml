@@ -51,6 +51,10 @@ site:
                 - how-tos/Earthdata_Cloud__Single_File__Direct_S3_Access_COG_Example.ipynb
                 - how-tos/Earthdata_Cloud__Single_File__Direct_S3_Access_NetCDF4_Example.ipynb
             - tutorials/04_On-Prem_Cloud.ipynb ## tutorial 4
+        - section: "Further Resources"
+          contents:
+            - further-resources.md
+
 
 format:
   html:
