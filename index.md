@@ -14,7 +14,7 @@ Welcome to the **2021 Cloud Workshop at AGU: Enabling Analysis in the Cloud Usin
 
 **The Cloud Workshop will take place virtually on December 12, 2021, from  8am-12pm CST [(UTC-6)](https://www.timeanddate.com/time/zones/cst) in [AGU session SCIWS31](https://agu.confex.com/agu/fm21/meetingapp.cgi/Session/124026)**. Registration is required. 
 
-[![](https://img.shields.io/static/v1.svg?logo=Jupyter&label=Openscapes&message=AWS+us-west-2&color=orange)](https://openscapes.2i2c.cloud)
+[![](https://img.shields.io/static/v1.svg?logo=Jupyter&label=Openscapes&message=AWS+us-west-2&color=orange)](https://openscapes.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FNASA-Openscapes%2F2021-Cloud-Workshop-AGU&urlpath=lab%2Ftree%2F2021-Cloud-Workshop-AGU%2F&branch=main)
 
 
 ## About
@@ -23,4 +23,4 @@ The **2021 Cloud Workshop at AGU: Enabling Analysis in the Cloud Using NASA Eart
 
 ## Acknowledgements
 
-Cloud Hackathon: Transitioning Earthdata Workflows to the Cloud is co-hosted by NASA's PO.DAAC, NSIDC DAAC, LP.DAAC, with support from ASDC DAAC, GES DISC and the NASA Openscapes Project, and cloud computing infrastructure by 2i2c. 
+2021 Cloud Workshop at AGU: Enabling Analysis in the Cloud Using NASA Earth Science Data is co-hosted by NASA's PO.DAAC, NSIDC DAAC, LP.DAAC, with support from ASDC DAAC, GES DISC and the NASA Openscapes Project, and cloud computing infrastructure by 2i2c. 
