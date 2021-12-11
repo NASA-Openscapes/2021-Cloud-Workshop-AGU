@@ -4,6 +4,7 @@ title: Additional resources
 
 ## A growing list of resources!
 
+- [2021 NASA Cloud Hackathon](https://nasa-openscapes.github.io/2021-Cloud-Hackathon) - November 2021, co-hosted by PODAAC, NSIDC DAAC, and LPDAAC. Additional support is provided by ASDC, GESDISC, IMPACT, and Openscapes.
 - [NASA Earthdata: How to Cloud](https://earthdata.nasa.gov/learn/user-resources/webinars-and-tutorials/how-to-cloud-for-earth-scientists)
 - [USGS Eyes on Earth Podcast: Satellites and Cloud Computing ](https://www.usgs.gov/centers/eros/science/eyes-earth-episode-58-satellites-and-cloud-computing?qt-science_center_objects=0#qt-science_center_objects) - with Aaron Friesz (LP DAAC!)
 - [PO.DAAC Cloud Data Page](https://podaac.jpl.nasa.gov/cloud-datasets/about)
