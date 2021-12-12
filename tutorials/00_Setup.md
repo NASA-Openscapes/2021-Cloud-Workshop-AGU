@@ -2,7 +2,7 @@
 title: 00. Setup for tutorials
 ---
 
-This tutorial will help you set up your JupyterHub (or Hub) with tutorials and other materials from our Cloud Hackathon github repository and connect your github account.
+This tutorial will help you set up your JupyterHub (or Hub) with tutorials and other materials from our Cloud Workshop folder..
 
 ## Step 1. Login to the Hub
 
@@ -26,14 +26,13 @@ While the Hub loads, we'll:
 
 -   Discuss cloud environments
 -   See how my Desktop is setup
--   Fork the Hackathon repository at github.com
 -   Discuss python and conda environments
 
-Then, when the Hub is loaded, we'll get oriented in the Hub and clone the forked repository into our cloud environment.
+Then, when the Hub is loaded, we'll get oriented in the Hub.
 
 ## Discussion: Cloud environment
 
-A brief overview about the [NASA Openscapes Cloud Environment](https://nasa-openscapes.github.io/2021-Cloud-Hackathon/clinic/jupyterhub.html) (following lessons from the Clinic).
+A brief overview. See [NASA Openscapes Cloud Environment](https://nasa-openscapes.github.io/2021-Cloud-Hackathon/clinic/jupyterhub.html) in the 2021-Cloud-Hackathon book for more detail.
 
 #### Cloud infrastructure
 
@@ -47,19 +46,8 @@ A brief overview about the [NASA Openscapes Cloud Environment](https://nasa-open
 I'll screenshare to show and/or talk through how I have oriented the following software we're using:
 
 -   [2i2c Jupyterhub](https://openscapes.2i2c.cloud/hub/) (our main workspace)
--   [Hackathon Repo](https://github.com/nasa-openscapes/2021-Cloud-Hackathon/) \<\> [Hackathon Book](https://nasa-openscapes.github.io/2021-Cloud-Hackathon/) (my teaching notes, your reference material)
+-   [Workshop Book](https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/) (my teaching notes, your reference material)
 -   Zoom Chat
--   Slack
-
-## Step 2. Fork the Hackathon GitHub repository
-
-"How do I get the tutorial repository into the Hub?". There are 2 steps. The first is from GitHub.com to fork the tutorial repository so that there is a connected copy in your user account that you can edit and push changes that won't affect the nasa-openscapes copy.
-
-Go to <https://github.com/nasa-openscapes/2021-Cloud-Hackathon> and fork the repository.
-
-![](../clinic/img/fork-tutorials.png)
-
-**Note:** if you've already done this in the Pre-Hackathon Clinic, you'll need to make sure you have the latest, following the [daily setup](https://nasa-openscapes.github.io/2021-Cloud-Hackathon/logistics/github-workflows.html#daily-setup) instructions.
 
 ## Discussion: Python and Conda environments
 
@@ -139,11 +127,11 @@ Scientific Python is a vast space and we only included libraries that are needed
 
 The project used to create our default environment is called **corn** (as it can include many Python kernels).
 
-If we want to update a library or install a whole new environment we need to open an issue on this repository. We can help your teams do this during project hacktime.
+If we want to update a library or install a whole new environment we need to open an issue on this repository. 
 
 ### [corn 🌽](https://github.com/NASA-Openscapes/corn)
 
-## Step 3. JupyterHub orientation
+## Step 2. JupyterHub orientation
 
 Now that the Hub is loaded, let's get oriented.
 
@@ -154,31 +142,9 @@ Now that the Hub is loaded, let's get oriented.
 -   Launcher & the big blue button
 -   "home directory"
 
-## Step 4. Clone the Hackathon GitHub repository
+## Step 3. Navigate to the Workshop folder
 
-Now we'll clone the GitHub repository, using a git extension for the JupyterHub. Go to your github account, and navigate to the repository that you just created by forking from the Openscapes repository.
-
-Click to copy the url for cloning the repository.
-
-![](img/Github-forked-repo.png){width="2224"}
-
-Now, go to JupyterHub and click on the git extension in the left panel and then click the blue button "Clone a Repository".
-
-![](img/JupyterHub-GitExtension.png)
-
-Then, paste the repository link to the forked repository that you copied from your github account into the "Clone a repo" pop up window. Then click the blue "CLONE" button. It will take a few moments to clone the repository into your Hub.
-
-Your link should look like `https://github.com/YOUR-USERNAME/2021-Cloud-Hackathon`. For example, the link is https://github.com/**virdi**/2021-Cloud-Hackathon. Note that it include your github username in the repo link.
-
-![](img/JupyterHub-Clone-Extension.png)
-
-Alternatively, you can use the terminal (command line) as per [github workflows: first-time setup](https://nasa-openscapes.github.io/2021-Cloud-Hackathon/logistics/github-workflows.html).
-
-Once the repository is cloned, you will see a new directory in the "File Browser" panel on the left named "2021-Cloud-Hackathon". In this directory, you have all hackathon material including the tutorials and this book to follow along during other Tutorials. You are all set.
-
-![](img/JupyterHub-Cloned-Repo-FileBrowser.png)
-
-> **REMEMBER:** This is your copy (or fork) of the hackathon materials and jupyter notebooks. So feel free to make any changes to the content of this repository.
+The workshop folder `2021-Cloud-Workshop-AGU` is in the shared folder on JupyterHub. 
 
 ## Jupyter notebooks
 
@@ -194,81 +160,4 @@ Stopping the server happens automatically when you log out, so navigate to "File
 
 !!! NOTE "logging out" - Logging out will **NOT** cause any of your work to be lost or deleted. It simply shuts down some resources. It would be equivalent to turning off your desktop computer at the end of the day.
 
-## Step 5. Tracking changes (Optional)
 
-Now that you have forked and cloned the repository in your Hub, you can make changes (edit, add, and/or delete content) and track these files using git. In this step, we will provide an overview of how to use git using the graphical interface (the JupyterLab git extension).
-
-### Step 5.1. Configure Git (`git config`)
-
-Configure git with your name and email address as shown here.
-
-``` bash
-git config --global user.name "Makhan Virdi"
-git config --global user.email "Makhan.Virdi@gmail.com"
-```
-
-Open a new terminal: `File >> New >> Terminal`
-
-![](img/JupyterHub-Tracking-GitConfig.png)
-
-Configure `git` to store your github credentials to avoid having to enter your github username and token each time you push changes to your repository(in [Step 5.5](#step-5.5.-transmit-committed-changes-to-your-github-(git-push),%20we%20will%20describe%20how%20to%20use%20github%20token%20instead%20of%20a%20password), we will describe how to use github token instead of a password)
-
-``` bash
-git config --global credential.helper store
-```
-
-### Step 5.2. Create a new file
-
-Let's create a new file: In the left panel on your Hub, click on the "directory" icon and then double click on "2021-Cloud-Hackathon" directory. Then, create a new file using the text editor in your 2i2c JupyterHub (`File >> New >> Text File`). Add some text to this file, for example: `A test file`. Save this file and rename it to `test.txt`.
-
-![](img/JupyterHub-Tracking-NewFile.png)
-
-### Step 5.3. Track the changes to the new file (`git add`)
-
-Click the git icon in the left panel. You can see that the newly added file is in the "Untracked" section. You can click the `+` icon next to the file name to let `git` track this file for changes.
-
-![](img/JupyterHub-Tracking-GitAdd.png)
-
-### Step 5.4. Commit the changes to the new file (`git commit`)
-
-Now, you will see that the file is **Staged**, which means that `git` is ready to take a snapshot of this file (and the repository) with the changes that you made. This snapshot is called a `commit`. To commit the changes, add a note (called a *commit message*) by typing in the text box that say "Summary".
-
-Now, click the blue "COMMIT" button to commit this change.
-
-> Note: A short message indicating the type of change to this file is a good practice. Optionally, a longer description may be added to the "Description" field.
-
-![](img/JupyterHub-Tracking-GitCommit.png)
-
-### Step 5.5. Transmit committed changes to your github (`git push`) {#step-5.5.-transmit-committed-changes-to-your-github-(git-push}
-
-At this stage, you have committed the changes to your git repository on your Hub. However, these changes are still on your Hub and needs to be transmitted to your repository on github (so that both the `local` copy on the JupyterHub and the `remote` copy on github are in sync).
-
-As seen in the picture below, the git extension indicates (with an orange dot on the cloud icon) that it is ready to `push` your changes to the `remote` (remote = your repository on github.com). To push to github, click the cloud button with an up arrow (circled in red in the picture).
-
-![](img/JupyterHub-Tracking-GitPush.png)
-
-The git extension in the Hub will prompt you to enter your github.com credentials. Enter you github.com username and a Personal Access Token (**DO NOT** use your password). To create a Personal Access Token, visit <https://github.com/settings/tokens/new> and create a new token with the permission as per the image below and specify its validity for 90 days.
-
-![](img/JupyterHub-Tracking-Credentials-Prompt.png)
-
-![](/clinic/img/github-token.png)
-
-**IMPORTANT:** You will see this token only once, so be sure to copy this. If you do not copy your token at this stage, you will need to generate a new token.
-
-![](/clinic/img/github-token-generated.png)
-
-Once you generate the token, copy it and paste in the Hub window that prompted you to enter the "Personal Access Token".
-
-![](img/JupyterHub-Tracking-GitPush-With-Credentials.png)
-
-Git will show a message at the bottom right telling that the changes were "Successfully pushed". Also, you will see that the "cloud icon with an up arrow" no longer has an orange dot, indicating that there are no more committed changes to push to the remote (github.com).
-
-> Note: You have configured git extension to store your credentials. You will not be prompted for your login/token again!
-
-![](img/JupyterHub-Tracking-GitPush-Success.png)
-
-That's all. You can use the same workflow (`add > commit > push`) for any other new or modified files!
-
-------------------------------------------------------------------------
-
-> Note: If you are comfortable with the command line, you can use the Terminal (In Hub, New \> Terminal) and follow the steps outlined in [the Clinic section](https://nasa-openscapes.github.io/2021-Cloud-Hackathon/clinic/notebooks.html#introduction-version-control-git-and-github).
