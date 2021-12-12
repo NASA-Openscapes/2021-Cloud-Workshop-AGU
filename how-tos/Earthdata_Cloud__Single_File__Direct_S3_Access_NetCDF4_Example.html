@@ -336,13 +336,18 @@
 <li><a href="#accessing-a-netcdf4hdf5-file---s3-direct-access" class="nav-link active" data-scroll-target="#accessing-a-netcdf4hdf5-file---s3-direct-access">Accessing a NetCDF4/HDF5 File - S3 Direct Access</a>
 <ul class="collapse">
 <li><a href="#summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
-<li><a href="#requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
+<li><a href="#requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a>
+<ul class="collapse">
+<li><a href="#aws-instance-running-in-us-west-2" class="nav-link" data-scroll-target="#aws-instance-running-in-us-west-2">1. AWS instance running in us-west-2</a></li>
+<li><a href="#earthdata-login" class="nav-link" data-scroll-target="#earthdata-login">2. Earthdata Login</a></li>
+<li><a href="#netrc-file" class="nav-link" data-scroll-target="#netrc-file">3. netrc File</a></li>
+</ul></li>
 <li><a href="#learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
 <li><a href="#import-packages" class="nav-link" data-scroll-target="#import-packages">Import Packages</a></li>
-<li><a href="#single-file-s3-direct-access" class="nav-link" data-scroll-target="#single-file-s3-direct-access">Single File S3 Direct Access</a>
-<ul class="collapse">
-<li><a href="#temporary-credentials" class="nav-link" data-scroll-target="#temporary-credentials">Temporary Credentials</a></li>
-</ul></li>
+<li><a href="#get-temporary-aws-credentials" class="nav-link" data-scroll-target="#get-temporary-aws-credentials">Get Temporary AWS Credentials</a></li>
+<li><a href="#set-up-an-s3fs-session-for-direct-access" class="nav-link" data-scroll-target="#set-up-an-s3fs-session-for-direct-access">Set up an <code>s3fs</code> session for Direct Access</a></li>
+<li><a href="#direct-in-region-access" class="nav-link" data-scroll-target="#direct-in-region-access">Direct In-region Access</a></li>
+<li><a href="#resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
 </ul></li>
 </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/nasa-openscapes/2021-Cloud-Workshop-AGU/edit/main/how-tos/Earthdata_Cloud__Single_File__Direct_S3_Access_NetCDF4_Example.ipynb" class="toc-action">Edit this page</a></p><p><a href="https://github.com/nasa-openscapes/2021-Cloud-Workshop-AGU/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -354,18 +359,30 @@
 <h1>Accessing a NetCDF4/HDF5 File - S3 Direct Access</h1>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>Harmonized Landsat Sentinel-2 (HLS) Operational Land Imager Surface Reflectance and TOA Brightness Daily Global 30m v2.0 (L30) (<a href="https://doi.org/10.5067/HLS/HLSL30.002">10.5067/HLS/HLSL30.002</a>)</p>
+<p>In this notebook, we will access monthly sea surface height from ECCO V4r4 (10.5067/ECG5D-SSH44). The data are provided as a time series of monthly netCDFs on a 0.5-degree latitude/longitude grid.</p>
+<p>We will access a single netCDF file from inside the AWS cloud (us-west-2 region, specifically) and load it into Python as an <code>xarray</code> <code>dataset</code>. This approach leverages S3 native protocols for efficient access to the data.</p>
 </section>
 <section id="requirements" class="level2">
 <h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
-<p>AWS intance running in us-west 2</p>
-<p>Earthdata Login</p>
-<p>.netrc file</p>
+<section id="aws-instance-running-in-us-west-2" class="level3">
+<h3 class="anchored" data-anchor-id="aws-instance-running-in-us-west-2">1. AWS instance running in us-west-2</h3>
+<p>NASA Earthdata Cloud data in S3 can be directly accessed via temporary credentials; this access is limited to requests made within the US West (Oregon) (code: us-west-2) AWS region.</p>
+</section>
+<section id="earthdata-login" class="level3">
+<h3 class="anchored" data-anchor-id="earthdata-login">2. Earthdata Login</h3>
+<p>An Earthdata Login account is required to access data, as well as discover restricted data, from the NASA Earthdata system. Thus, to access NASA data, you need Earthdata Login. Please visit https://urs.earthdata.nasa.gov to register and manage your Earthdata Login account. This account is free to create and only takes a moment to set up.</p>
+</section>
+<section id="netrc-file" class="level3">
+<h3 class="anchored" data-anchor-id="netrc-file">3. netrc File</h3>
+<p>You will need a netrc file containing your NASA Earthdata Login credentials in order to execute the notebooks. A netrc file can be created manually within text editor and saved to your home directory. For additional information see: <a href="https://nasa-openscapes.github.io/2021-Cloud-Hackathon/tutorials/04_NASA_Earthdata_Authentication.html#authentication-via-netrc-file">Authentication for NASA Earthdata</a>.</p>
+</section>
 </section>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
 <ul>
-<li>S3 Access</li>
+<li>how to retrieve temporary S3 credentials for in-region direct S3 bucket access</li>
+<li>how to perform in-region direct access of ECCO_L4_SSH_05DEG_MONTHLY_V4R4 data in S3</li>
+<li>how to plot the data</li>
 </ul>
 <hr>
 </section>
@@ -381,10 +398,9 @@
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> hvplot.xarray</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> holoviews <span class="im">as</span> hv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="single-file-s3-direct-access" class="level2">
-<h2 class="anchored" data-anchor-id="single-file-s3-direct-access">Single File S3 Direct Access</h2>
-<section id="temporary-credentials" class="level3">
-<h3 class="anchored" data-anchor-id="temporary-credentials">Temporary Credentials</h3>
+<section id="get-temporary-aws-credentials" class="level2">
+<h2 class="anchored" data-anchor-id="get-temporary-aws-credentials">Get Temporary AWS Credentials</h2>
+<p>Direct S3 access is achieved by passing NASA supplied temporary credentials to AWS so we can interact with S3 objects from applicable Earthdata Cloud buckets. For now, each NASA DAAC has different AWS credentials endpoints. Below are some of the credential endpoints to various DAACs:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>s3_cred_endpoint <span class="op">=</span> {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'podaac'</span>:<span class="st">'https://archive.podaac.earthdata.nasa.gov/s3credentials'</span>,</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'gesdisc'</span>: <span class="st">'https://data.gesdisc.earthdata.nasa.gov/s3credentials'</span>,</span>
@@ -392,22 +408,41 @@
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'ornldaac'</span>: <span class="st">'https://data.ornldaac.earthdata.nasa.gov/s3credentials'</span>,</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'ghrcdaac'</span>: <span class="st">'https://data.ghrc.earthdata.nasa.gov/s3credentials'</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Create a function to make a request to an endpoint for temporary credentials. Remember, each DAAC has their own endpoint and credentials are not usable for cloud data from other DAACs.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_temp_creds(provider):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> requests.get(s3_cred_endpoint[provider]).json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>temp_creds_req <span class="op">=</span> get_temp_creds(<span class="st">'podaac'</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#temp_creds_req</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="set-up-an-s3fs-session-for-direct-access" class="level2">
+<h2 class="anchored" data-anchor-id="set-up-an-s3fs-session-for-direct-access">Set up an <code>s3fs</code> session for Direct Access</h2>
+<p><code>s3fs</code> sessions are used for authenticated access to s3 bucket and allows for typical file-system style operations. Below we create session by passing in the temporary credentials we recieved from our temporary credentials endpoint.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fs_s3 <span class="op">=</span> s3fs.S3FileSystem(anon<span class="op">=</span><span class="va">False</span>, </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                          key<span class="op">=</span>temp_creds_req[<span class="st">'accessKeyId'</span>], </span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                          secret<span class="op">=</span>temp_creds_req[<span class="st">'secretAccessKey'</span>], </span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                          token<span class="op">=</span>temp_creds_req[<span class="st">'sessionToken'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this example we’re interested in the ECCO data collection from NASA’s PO.DAAC in Earthdata Cloud. Below we specify the s3 URL to the data asset in Earthdata Cloud. This URL can be found via <a href="../tutorials/01_Earthdata_Search.html">Earthdata Search</a> or programmatically through the <a href="https://nasa-openscapes.github.io/2021-Cloud-Hackathon/tutorials/01_Data_Discovery_CMR.html">CMR</a> and <a href="https://nasa-openscapes.github.io/2021-Cloud-Hackathon/tutorials/02_Data_Discovery_CMR-STAC_API.html">CMR-STAC</a> APIs.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>s3_url <span class="op">=</span> <span class="st">'s3://podaac-ops-cumulus-protected/ECCO_L4_SSH_05DEG_MONTHLY_V4R4/SEA_SURFACE_HEIGHT_mon_mean_2015-01_ECCO_V4r4_latlon_0p50deg.nc'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="direct-in-region-access" class="level2">
+<h2 class="anchored" data-anchor-id="direct-in-region-access">Direct In-region Access</h2>
+<p>Open with the netCDF file using the s3fs package, then load the cloud asset into an <code>xarray</code> <code>dataset</code>.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>s3_file_obj <span class="op">=</span> fs_s3.<span class="bu">open</span>(s3_url, mode<span class="op">=</span><span class="st">'rb'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb8"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>ssh_ds <span class="op">=</span> xr.open_dataset(s3_file_obj, engine<span class="op">=</span><span class="st">'h5netcdf'</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>ssh_ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ssh_ds.SSH.hvplot.image(x<span class="op">=</span><span class="st">'longitude'</span>, y<span class="op">=</span><span class="st">'latitude'</span>, cmap<span class="op">=</span><span class="st">'Spectral_r'</span>, aspect<span class="op">=</span><span class="st">'equal'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-
+<p>Get the <code>SSH</code> variable as an <code>xarray</code> <code>dataarray</code></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ssh_da <span class="op">=</span> ssh_ds.SSH</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>ssh_da</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Plot the <code>SSH</code> <code>dataarray</code> for time <strong>2015-01-16T12:00:00</strong> using <code>hvplot</code>.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ssh_da.hvplot.image(x<span class="op">=</span><span class="st">'longitude'</span>, y<span class="op">=</span><span class="st">'latitude'</span>, cmap<span class="op">=</span><span class="st">'Spectral_r'</span>, aspect<span class="op">=</span><span class="st">'equal'</span>).opts(clim<span class="op">=</span>(ssh_da.attrs[<span class="st">'valid_min'</span>][<span class="dv">0</span>],ssh_da.attrs[<span class="st">'valid_max'</span>][<span class="dv">0</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
 </section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<p><a href="https://github.com/podaac/ECCO/blob/main/Data_Access/cloud_direct_access_s3.ipynb">Direct access to ECCO data in S3 (from us-west-2)</a></p>
+<p>[Data_Access__Direct_S3_Access__PODAAC_ECCO_SSH](https://github.com/NASA-Openscapes/2021-Cloud-Hackathon/blob/main/tutorials/Additional_Resources__Data_Access__Direct_S3_Access__PODAAC_ECCO_SSH.ipynb) using CMR-STAC API to retrieve S3 links</p>
+
+
 </section>
 </section>
 </main> <!-- /main -->
