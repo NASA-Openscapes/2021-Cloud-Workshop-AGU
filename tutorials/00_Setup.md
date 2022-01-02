@@ -6,7 +6,7 @@ This tutorial will help you set up your JupyterHub (or Hub) with tutorials and o
 
 ## Step 1. Login to the Hub
 
-Please go to <https://openscapes.2i2c.cloud/hub/>. Log in with your GitHub Account, and select "Small".
+Please go to Jupyter Hub and Log in with your GitHub Account, and select "Small".
 
 Alternatively, you can also click this badge to launch the Hub:
 
@@ -38,14 +38,13 @@ A brief overview. See [NASA Openscapes Cloud Environment](https://nasa-openscape
 
 -   Cloud: AWS [`us-west-2`](https://goo.gl/maps/BYqGYxahpwJgzKwR8)
     -   Data: AWS S3 (cloud) and [NASA DAAC](https://earthdata.nasa.gov/eosdis/daacs) data centers (on-prem).
-    -   Cloud compute environment: [2i2c Jupyterhub deployment](https://docs.2i2c.org/en/latest/)
+    -   Cloud compute environment:  [2i2c Jupyterhub deployment](https://docs.2i2c.org/en/latest/)
         -   IDE: [**JupyterLab**](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html)
 
 ## Discussion: My desktop setup
 
 I'll screenshare to show and/or talk through how I have oriented the following software we're using:
 
--   [2i2c Jupyterhub](https://openscapes.2i2c.cloud/hub/) (our main workspace)
 -   [Workshop Book](https://nasa-openscapes.github.io/2021-Cloud-Workshop-AGU/) (my teaching notes, your reference material)
 -   Zoom Chat
 
