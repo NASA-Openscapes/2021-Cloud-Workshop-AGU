@@ -6,7 +6,7 @@ This tutorial will help you set up your JupyterHub (or Hub) with tutorials and o
 
 ## Step 1. Login to the Hub
 
-Please go to Jupyter Hub and Log in with your GitHub Account, and select "Small".
+Please go to the [Jupyter Hub](https://openscapes.2i2c.cloud/) and Log in with your GitHub Account, and select "Small".
 
 Alternatively, you can also click this badge to launch the Hub:
 
